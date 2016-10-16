@@ -24,6 +24,7 @@ public class UnitConverterTest {
 	
 	@Test
 	public void testConvertToInches() {
+		assertEquals(callConvertToInchesWhenPrivate("inches",1), 1, 0.01);
 		assertEquals(callConvertToInchesWhenPrivate("feet",1), 12, 0.01);
 		assertEquals(callConvertToInchesWhenPrivate("yards",1), 12*3, 0.01);
 		assertEquals(callConvertToInchesWhenPrivate("miles",1), 12*3*1760, 0.01);
@@ -32,6 +33,7 @@ public class UnitConverterTest {
 	
 	@Test
 	public void testConvertFromInches() {
+		assertEquals(callConvertFromInchesWhenPrivate("inches",1), 1, 0.01);
 		assertEquals(callConvertFromInchesWhenPrivate("feet",12), 1, 0.01);
 		assertEquals(callConvertFromInchesWhenPrivate("yards",12*3), 1, 0.01);
 		assertEquals(callConvertFromInchesWhenPrivate("miles",12*3*1760), 1, 0.01);
